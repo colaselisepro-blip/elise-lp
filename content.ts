@@ -12,7 +12,7 @@ export const hero = {
   tag: "À lire si tu fais 30K+/mois.",
   h1_bold: "Ta sales team laisse",
   h1_bold2: "du cash sur la table.",
-  h1_italic: "On la structure pour toi.",
+  h1_italic: "Je la structure pour toi.",
   subheadline:
     "Je suis Elise Colas, Head of Sales pour infopreneurs francophones entre 30K et 100K/mois. Ma mission : transformer ton département commercial en machine qui tourne sans toi.",
   proof: "+250K€/mois collectés par mes équipes en 2025",

@@ -34,7 +34,7 @@ export default function About() {
             }}
           >
             <Image
-              src="/placeholder-elise.png"
+              src="/elise-about.JPG"
               alt="Elise Colas, Head of Sales"
               fill
               style={{ objectFit: "cover" }}

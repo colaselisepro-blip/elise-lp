@@ -26,8 +26,7 @@ export const filterIcp = {
   items: [
     "Tu fais 30K+/mois de CA sur un business de coaching, consulting ou expertise.",
     "Tu as 1 à 6 closers en ce moment, avec des résultats instables.",
-    "Tu veux passer +50-100K/mois stables sans bosser 70h/semaine.",
-    "Tu acceptes de déléguer ta sales team à une personne qui sait ce qu'elle fait.",
+    "Tu veux passer 50-100K+/mois stables sans bosser 70h/semaine.",
   ],
   disclaimer:
     "Si un seul point ne coche pas, je ne suis probablement pas la bonne personne pour toi aujourd'hui. Et c'est OK.",
@@ -42,12 +41,12 @@ export const reframe = {
   body1:
     "La plupart des coachs à 30K+/mois dépensent en ads. Le marketing fonctionne. Les leads arrivent. Puis ils disparaissent dans un pipeline qui coule.",
   body2:
-    "Ce n'est pas une question d'acquisition. C'est une question de délivery commerciale. Tes closers closent à 15% là où ils devraient être à 40%. Ton cash collection est sous 60% là où il devrait être à 80%. Multiplie l'écart par 12 mois, c'est 200K qui sont sortis de ta trésorerie sans que personne ne le voie.",
-  signs_title: "5 signes que ta sales team coule ton cash",
+    "Ce n'est pas une question d'acquisition. C'est une question de délivery commerciale. Tes closers closent à 15% là où ils devraient être à 40%. Ton cash collection est sous 40% là où il devrait être à 60%. Multiplie l'écart par 12 mois, c'est 200K qui sont sortis de ta trésorerie sans que personne ne le voie.",
+  signs_title: "4 signes que ta sales team coule ton cash",
   signs: [
     {
       number: "01",
-      title: "Ton cash collection est sous 60%",
+      title: "Ton cash collection est sous 40%",
       body: "Tes closers acceptent encore des paiements en 3x.",
     },
     {
@@ -57,16 +56,11 @@ export const reframe = {
     },
     {
       number: "03",
-      title: "Tu ne connais pas ton taux par source de trafic",
-      body: "Ads, YouTube, webinaire, DM. Sans ces chiffres, tu pilotes à l'aveugle.",
-    },
-    {
-      number: "04",
       title: "Tes closers disent que tes leads sont \"compliqués\"",
       body: "Un lead compliqué n'existe pas.",
     },
     {
-      number: "05",
+      number: "04",
       title: "Ton CA stagne malgré la croissance du trafic",
       body: "Le plafond n'est pas dans ton marketing, il est dans ton équipe commerciale.",
     },
@@ -92,7 +86,7 @@ export const approach = {
       roman: "II.",
       title: "Structure & coaching",
       subtitle: "Semaines 2–8",
-      body: "Je recrute ou je forme ton équipe existante sur mes SOP de closing. Coaching quotidien 30 min avec tes closers. Dashboard de tracking par closer + par source. Mon objectif : 48% de taux de closing en 60 jours.",
+      body: "Je recrute ou je forme ton équipe existante sur mes SOP de closing. Coaching quotidien 30 min avec tes closers. Dashboard de tracking par closer + par source. Mon objectif : 40% de taux de closing en 60 jours.",
     },
     {
       roman: "III.",
@@ -108,12 +102,12 @@ export const results = {
   h2: "Ce que je livre chez mes clients.",
   metrics: [
     {
-      value: "x2.6",
+      value: "x2.7",
       label: "sur le taux de closing",
       detail: "18% → 48% en 60 jours",
     },
     {
-      value: "+71%",
+      value: "+20 pts",
       label: "sur le cash collection",
       detail: "42% → 62%",
     },
@@ -134,7 +128,7 @@ export const results = {
 
 export const offers = {
   eyebrow: "Selon ta maturité, ton budget, ton besoin.",
-  h2: "4 façons de travailler ensemble.",
+  h2: "3 façons de travailler ensemble.",
   items: [
     {
       roman: "I.",
@@ -152,7 +146,7 @@ export const offers = {
       ],
       result:
         "Tu sors de l'opérationnel commercial. Ton CA devient prévisible et ne dépend plus de toi. Taux de closing cible : 30–50%.",
-      price: "Sur devis — diagnostic offert.",
+      price: null,
       cta: "Postuler",
     },
     {
@@ -169,8 +163,8 @@ export const offers = {
         "Montée en compétence sur tes scripts existants",
       ],
       result:
-        "Tes closers closent plus, à des paniers moyens plus élevés. Le taux d'exécution monte — durablement.",
-      price: "Retainer mensuel — à partir de 2K/mois.",
+        "Tes closers closent plus, à des paniers moyens plus élevés. Le taux d'exécution monte.",
+      price: null,
       cta: "En parler",
     },
     {
@@ -189,25 +183,8 @@ export const offers = {
       ],
       result:
         "Tu as tous les process d'une HOS expérimentée, dans un Notion que tu gardes à vie. Tu appliques en solo ou avec ton équipe.",
-      price: "Forfait one-shot — à partir de 3K. Livrable sous 3 semaines.",
+      price: null,
       cta: "Commander",
-    },
-    {
-      roman: "IV.",
-      name: "Audit flash",
-      tag: null,
-      sub: "Un diagnostic chiffré en 45 minutes.",
-      featured: false,
-      includes: [
-        "Analyse de tes 3 principaux indicateurs commerciaux",
-        "Identification de ta plus grosse fuite de cash",
-        "Plan d'action prioritaire avec quick wins",
-        "Accès à mes ressources de référence",
-      ],
-      result:
-        "Tu sais exactement ce qui coule ta sales team et par où commencer. Que tu travailles avec moi ou non.",
-      price: "Gratuit — 2 places par semaine.",
-      cta: "Réserver",
     },
   ],
 };
@@ -218,7 +195,7 @@ export const about = {
   h2_italic: "95% masculin",
   h2_suffix: ".",
   body1:
-    "Pendant 5 ans, j'ai dirigé 300 commerciaux dans des grands groupes — France, Europe, USA. J'ai appris ce qu'est une sales team qui performe, et ce qui la casse.",
+    "Pendant 5 ans, j'ai dirigé 300 commerciaux dans des grands groupes : France, Europe, Afrique. J'ai appris ce qu'est une sales team qui performe, et ce qui la casse.",
   body2:
     "En 2024, j'ai quitté le salariat pour devenir closer en ligne. En un an, j'ai closé 800K€ personnellement sur une niche technique (fiscalité) que 95% des closers fuient.",
   body3:
@@ -230,6 +207,11 @@ export const faq = {
   eyebrow: "FAQ",
   h2: "Questions qu'on me pose souvent.",
   items: [
+    {
+      question: "C'est quoi exactement l'audit de 45 min ?",
+      answer:
+        "Un diagnostic chiffré de ta sales team. On passe en revue tes 3 indicateurs clés (taux de closing, cash collection, turnover closers), j'identifie ta plus grosse fuite de cash et je te donne un plan d'action prioritaire. Tu repars avec un plan concret, que tu travailles avec moi ou non. C'est gratuit. 2 places par semaine.",
+    },
     {
       question: "Est-ce que tu travailles avec n'importe quelle niche ?",
       answer:

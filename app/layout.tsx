@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://elisecolas.com"),
   title: "Elise Colas — Head of Sales pour infopreneurs | Audit gratuit",
   description:
     "Je structure les pôles de vente des coachs et experts francophones à 30K+/mois. Audit gratuit 45 min. 2 places par trimestre.",

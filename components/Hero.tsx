@@ -161,7 +161,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/placeholder-elise.png"
+              src="/placeholder-elise.JPG"
               alt="Photo d'Elise Colas, Head of Sales"
               fill
               style={{ objectFit: "cover" }}

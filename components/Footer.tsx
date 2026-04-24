@@ -1,3 +1,5 @@
+"use client";
+
 import { footer, INSTAGRAM_URL, LINKEDIN_URL, EMAIL } from "@/content";
 
 export default function Footer() {

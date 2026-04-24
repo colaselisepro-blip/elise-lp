@@ -165,17 +165,19 @@ export default function Offers() {
                 </div>
 
                 {/* Price */}
-                <p
-                  style={{
-                    fontFamily: '"Playfair Display", serif',
-                    fontStyle: "italic",
-                    fontSize: "0.9375rem",
-                    color: "#6B5E4F",
-                    marginBottom: "20px",
-                  }}
-                >
-                  {offer.price}
-                </p>
+                {offer.price && (
+                  <p
+                    style={{
+                      fontFamily: '"Playfair Display", serif',
+                      fontStyle: "italic",
+                      fontSize: "0.9375rem",
+                      color: "#6B5E4F",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    {offer.price}
+                  </p>
+                )}
 
                 {/* CTA */}
                 <a

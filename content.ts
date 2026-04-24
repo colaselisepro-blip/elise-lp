@@ -3,7 +3,7 @@
 // Modifie ici tous les textes sans toucher aux composants.
 // ============================================================
 
-export const CALENDLY_URL = "https://calendly.com/colas-elise-pro/30min";
+export const CALENDLY_URL = "https://calendly.com/colas-elise-pro/45min";
 export const INSTAGRAM_URL = "https://instagram.com/elise.sales.signature";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/elise-colas1/";
 export const EMAIL = "contact@elisecolas.com"; // À mettre à jour

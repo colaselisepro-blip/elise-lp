@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elise Colas — Landing Page
 
-## Getting Started
+Site one-page pour Elise Colas, Head of Sales pour infopreneurs francophones.
 
-First, run the development server:
+---
+
+## Lancer le site en local
+
+### Prérequis
+- Node.js installé (si ce n'est pas le cas : va sur [nodejs.org](https://nodejs.org) et télécharge la version LTS)
+- pnpm installé (commande : `npm install -g pnpm`)
+
+### Démarrer
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+cd elise-lp
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvre [http://localhost:3000](http://localhost:3000) dans ton navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Modifier le contenu (textes, liens, prix)
 
-## Learn More
+**Tout le texte de la page est centralisé dans un seul fichier :**
 
-To learn more about Next.js, take a look at the following resources:
+```
+content.ts   ← ouvre ce fichier pour modifier n'importe quel texte
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tu peux modifier :
+- Les titres, sous-titres, descriptions de chaque section
+- Le lien Calendly (variable `CALENDLY_URL`)
+- Ton Instagram, LinkedIn, email (variables en haut du fichier)
+- Les offres, prix, bullet points
+- Les métriques résultats
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Tu n'as pas besoin de toucher aux fichiers dans `components/` pour changer du texte.**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Remplacer le lien Calendly
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dans `content.ts`, ligne 5 :
+
+```ts
+export const CALENDLY_URL = "https://calendly.com/colas-elise-pro/30min";
+```
+
+Remplace l'URL par celle de ton événement Calendly.
+
+---
+
+## Remplacer ta photo
+
+Deux endroits utilisent ta photo :
+- **Section Hero** (droite de l'écran)
+- **Section Qui je suis**
+
+Remplace le fichier :
+
+```
+public/placeholder-elise.png
+```
+
+Par ta propre photo en la renommant `placeholder-elise.png` (format recommandé : 4:5, au moins 800x1000px, JPG ou PNG).
+
+---
+
+## Ajouter tes vrais liens Instagram et LinkedIn
+
+Dans `content.ts` :
+
+```ts
+export const INSTAGRAM_URL = "https://instagram.com/elise.sales.signature";
+export const LINKEDIN_URL  = "https://linkedin.com/in/elise-colas";   // ← à mettre à jour
+export const EMAIL         = "contact@elisecolas.com";                  // ← à mettre à jour
+```
+
+---
+
+## Déployer sur Vercel (recommandé)
+
+### Étape 1 — Mettre le projet sur GitHub
+
+1. Crée un compte sur [github.com](https://github.com) si tu n'en as pas
+2. Crée un nouveau repo (bouton "New repository")
+3. Dans ton terminal, dans le dossier `elise-lp` :
+
+```bash
+git remote add origin https://github.com/TON-USERNAME/elise-lp.git
+git push -u origin main
+```
+
+### Étape 2 — Connecter Vercel
+
+1. Va sur [vercel.com](https://vercel.com) et crée un compte (gratuit)
+2. Clique "Add New Project"
+3. Connecte ton compte GitHub, sélectionne le repo `elise-lp`
+4. Vercel détecte automatiquement Next.js — clique "Deploy"
+5. En 1-2 minutes, ton site est en ligne avec une URL `*.vercel.app`
+
+### Étape 3 — Ajouter ton domaine custom
+
+1. Achète ton domaine sur [Namecheap](https://namecheap.com) ou [OVH](https://ovh.com) (ex: `elisecolas.com`)
+2. Dans Vercel > Settings > Domains, ajoute ton domaine
+3. Vercel te donnera les DNS à configurer chez ton registraire :
+   - Un enregistrement **A** : `76.76.21.21`
+   - Un enregistrement **CNAME** : `cname.vercel-dns.com`
+4. Attends 5-30 min que les DNS se propagent
+
+---
+
+## Configurer Plausible Analytics
+
+Plausible est l'outil d'analytics GDPR-friendly déjà intégré dans le site.
+
+1. Crée un compte sur [plausible.io](https://plausible.io)
+2. Ajoute ton domaine (ex: `elisecolas.com`)
+3. Dans `app/layout.tsx`, le domaine est déjà configuré sur `elisecolas.com` — mets à jour si besoin
+
+---
+
+## Structure des fichiers
+
+```
+elise-lp/
+├── app/
+│   ├── layout.tsx       ← SEO, analytics, fonts
+│   ├── page.tsx         ← assemblage des sections
+│   └── globals.css      ← palette de couleurs, typographie
+├── components/
+│   ├── Hero.tsx
+│   ├── FilterIcp.tsx
+│   ├── Reframe.tsx
+│   ├── Approach.tsx
+│   ├── Results.tsx
+│   ├── Offers.tsx
+│   ├── About.tsx
+│   ├── Faq.tsx
+│   ├── CtaCalendly.tsx
+│   ├── Footer.tsx
+│   └── ui/
+│       ├── HighlightBox.tsx   ← box surlignée or avec rotation
+│       └── SectionHeading.tsx ← titre de section réutilisable
+├── content.ts           ← TOUT LE TEXTE DE LA PAGE EST ICI
+└── public/
+    ├── placeholder-elise.png  ← remplace par ta photo
+    └── og-image.png           ← image de partage réseaux sociaux
+```
+
+---
+
+## Build de production
+
+```bash
+pnpm build
+pnpm start
+```
+
+Le build doit passer sans erreur avant de déployer.
